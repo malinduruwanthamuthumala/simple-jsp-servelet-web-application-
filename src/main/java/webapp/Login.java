@@ -9,12 +9,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns="/login1.go")
+@WebServlet(urlPatterns="/login1.go/")
 public class Login extends HttpServlet{
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException,ServletException {
-//	 request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request,response);
+ 
+	String name=request.getParameter("name");
+	request.setAttribute("name",name);
+	request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request,response);
 	
-	System.out.println(request.getParameter("name"));	
 	}
 }
