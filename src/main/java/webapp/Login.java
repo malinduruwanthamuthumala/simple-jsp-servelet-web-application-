@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 public class Login extends HttpServlet{
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException,ServletException {
-	PrintWriter writer=response.getWriter();	
-	writer.println("hello word");
+	 request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request,response);
 	}
 }
