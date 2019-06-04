@@ -34,16 +34,8 @@ public class LoginServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<title>Yahoo!!!!!!!!</title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("My First Servlet");
-		out.println("</body>");
-		out.println("</html>");
-
+		System.out.println(request.getParameter("name"));	
+		System.out.println("malindu");
 	}
 
 }
